@@ -15,4 +15,6 @@ At this point, two neuroevolutionary models are considered, which I describe as 
 
 The emergent model seeks to make the neural network of each genome do as much of the work as possible in terms of working out efficient play.  The neural net is fed the state of the board each frame of the game and the output is used to give direct inputs to the controller.
  
+The decisive model takes a more focused approach.  It only feeds the neural network when a new game piece is in play, therefore only feeding the neural network when a newly actionable state of the board is available for consideration.  When this model processes the board state, the output is a series of relative favorabilities for a series of possible button presses which move decisively (hence the name) to achieve one of the eighteen possible ending positions (six columms x three block rotation states) of the new block in play.
+
 Code is provided in [Jupyter Notebook](https://jupyter.org/) format (.ipynb)
