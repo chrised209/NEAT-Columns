@@ -11,4 +11,6 @@ The second set of fitness adjustment terms consists of two kinds of behavioral "
 
 The second nudge is actually a penalty for undesireable play.  As the gem blocks stack towards the top of the board, the game approaches a game-over state resulting from the inability of a game piece to entirely fit on the game board.  To discourage this, each column of the game board is evaluated for gem height, raised to the fourth power, and the difference between each term and 3<sup>4</sup> is summed and scaled with a x -0.2 multiplier to encourage the agent to keep the gems closer to the bottom of the board.  Since blocks in play are 3 gems high, it is used as the neutral point.  Note that the term is not always negative - after a matching event some 1- or 2- high columns may be left with negative terms that become bonuses when the negative multiplier is applied.  This is by design, as these short columns can serve as "stubs" for matching with the next block in play.
  
+At this point, two neuroevolutionary models are considered, which I describe as "emergent" and "decisive."  A third model, which I plan to call "predictive", is also under development.
+ 
 Code is provided in [Jupyter Notebook](https://jupyter.org/) format (.ipynb)
