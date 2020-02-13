@@ -17,4 +17,6 @@ The emergent model seeks to make the neural network of each genome do as much of
  
 The decisive model takes a more focused approach.  It only feeds the neural network when a new game piece is in play, therefore only feeding the neural network when a newly actionable state of the board is available for consideration.  When this model processes the board state, the output is a series of relative favorabilities for a series of possible button presses which move decisively (hence the name) to achieve one of the eighteen possible ending positions (six columms x three block rotation states) of the new block in play.  This method has proven much more proficient in achieving match events much more quickly than the emergent model, with the infinite loop behavior effectively eliminated.
 
+The predictive model will be based on the decisive model, but with the additional imput of the preview block displayed just to the right of the upper right corner of the board.  This will give the model a view into what the next block in play will be and allow the model to use that information to plan the placement of the current block.
+
 Code is provided in [Jupyter Notebook](https://jupyter.org/) format (.ipynb)
